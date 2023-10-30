@@ -5,32 +5,40 @@ import { ThemeSwitcher } from './components/ThemeSwitcher';
 export default async function Home() {
   return (
     <>
-      <header className="container mx-auto mt-10 px-6 text-center h-40 md:h-20">
+      {/* Header Container */}
+      <header className="container mx-auto mb-10 px-6 py-10 text-center h-10 md:h-20">
         {/* Dynamic Logo */}
-        <div className="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10"></div>
+        <Link
+          className="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10"
+          href="/"
+          passHref={true}
+        >
+          {/* <span className="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10" /> */}
+        </Link>
         {/* Menu */}
         <div className="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10">
-          <Link href="#Dashboard" className="hover:text-accentCyan">
+          <Link href="/Dashboard" className="hover:text-accentOrange">
             Dashboard
           </Link>
-          <Link href="#Sign in" className="hover:text-accentCyan">
+          <Link href="#Sign in" className="hover:text-accentOrange">
             Sign in
           </Link>
           <ThemeSwitcher />
         </div>
       </header>
+
       {/** Hero Section */}
       <section
         id="hero"
-        className="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom"
+        className="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-bottom bg-fill"
       >
         {/** Hero Container */}
-        <div className="container mx-auto px-6 text-center md:pt-20 pb-52">
+        <div className="container mx-auto px-6 text-center md:pt-0 pb-52">
           <Image
-            src="/images/illustration-intro.png"
+            src="/images/hero3(6).png"
             priority
-            width={470}
-            height={349}
+            width={356}
+            height={534}
             alt=""
             className="mx-auto"
           />
@@ -42,13 +50,13 @@ export default async function Home() {
             Access them wherever you need, share and collaborate with friends
             family, and co-workers.
           </p>
-          <button className="p-3 rounded-full w-52 bg-accentCyan hover:scale-95">
+          <button className="p-3 rounded-full w-52 bg-accentOrange hover:scale-95">
             Get Started
           </button>
         </div>
       </section>
       {/** Features Section */}
-      <section id="features" className="pt-12 bg-gray-50 dark:bg-darkBlue1">
+      <section id="features" className="pt-12 bg-gray-50 dark:bg-lightOrange">
         {/** Features Container */}
         <div className="container mx-auto px-6 pb-32">
           {/** First Row */}
@@ -133,7 +141,7 @@ export default async function Home() {
         </div>
       </section>
       {/** Productive Section */}
-      <section id="productive" className="bg-white dark:bg-darkBlue">
+      <section id="productive" className="bg-white dark:bg-darkOrange">
         {/** Productive Container */}
         <div className="flex flex-col items-center mx-auto px-6 pt-24 pb-32 md:flex-row md:space-x-16">
           {/** Image */}
@@ -166,7 +174,7 @@ export default async function Home() {
             <div>
               <Link
                 href="#"
-                className="border-b border-accentCyan text-accentCyan"
+                className="border-b border-accentOrange text-accentOrange"
               >
                 See how Rentals Bureau works
                 <Image
@@ -182,7 +190,7 @@ export default async function Home() {
         </div>
       </section>
       {/** Testimonial Section */}
-      <section id="testimonial" className="bg-gray-50 dark:bg-darkBlue">
+      <section id="testimonial" className="bg-gray-50 dark:bg-lightRed">
         {/** Testimonial Container */}
         <div className="container mx-auto px-6 pt-12 pb-80 md:pb-96">
           {/** Boxes Container */}
@@ -197,7 +205,7 @@ export default async function Home() {
             />
 
             {/** Box-1 */}
-            <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue md:w-1/3">
+            <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkOrange md:w-1/3">
               <p className="text-sm leading-5 md:text-lg">
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -220,7 +228,7 @@ export default async function Home() {
             </div>
 
             {/** Box-2 */}
-            <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue md:w-1/3">
+            <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkOrange md:w-1/3">
               <p className="text-sm leading-5 md:text-lg">
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -244,7 +252,7 @@ export default async function Home() {
               </div>
             </div>
             {/** Box 3 */}
-            <div className="flex flex-col p-10 space-y-6  rounded-lg bg-gray-100 dark:bg-darkBlue md:w-1/3">
+            <div className="flex flex-col p-10 space-y-6  rounded-lg bg-gray-100 dark:bg-darkOrange md:w-1/3">
               <p className="text-sm leading-5 md:text-lg">
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -273,9 +281,9 @@ export default async function Home() {
       {/** Early Access Section */}
       <section
         id="early-access"
-        className="relative px-6 dark:bg-darkBlue2 md:px-0"
+        className="relative px-6 dark:bg-darkOrange2 md:px-0"
       >
-        <div className="relative -top-40 max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-lg bg-gary-200 dark:bg-darkBlue1 md:px-16">
+        <div className="relative -top-40 max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-lg bg-gary-200 dark:bg-darkOrange1 md:px-16">
           <h5 className="text-2xl font-bold">Get early access today</h5>
           <p className="text-sm">
             It only takes a minute to sign up and our free starter tier is
@@ -287,12 +295,12 @@ export default async function Home() {
             <div className="w-full md:flex-1">
               <input
                 type="text"
-                className="w-full px-10 py-3 rounded-full focus:outline-none"
+                className="w-full px-10 py-3 rounded-full focus:outline-slate-100 text-center"
                 placeholder="email@rentalsbureau.com"
               />
             </div>
 
-            <button className="w-full p-3 px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
+            <button className="w-full p-3 px-6 rounded-full bg-accentOrange md:w-56 hover:scale-95">
               Get Started For Free
             </button>
           </div>

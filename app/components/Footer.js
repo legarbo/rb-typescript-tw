@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function Footer() {
   return (
-    <footer className="bg-darkBlue2 text-white">
+    <footer className="bg-accentBlack text-white">
       <div className="container mx-auto pt-12 px-5 pb-10">
         {/** flex Container for All Items */}
         <div className="flex flex-col justify-between space-y-24 md:flex-row md:space-y-0">
